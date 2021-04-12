@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/89024d914e.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="container-mt-5">
+        <div class="row">
+            <div class="col-5">
+                <div class="card ">
+                    <div class="card-header bg-secodary text-black text-center">
+                        <h3 class="card-title">Js Calculator APP</h3>
+                    </div>
+                    <div class="card-body bg-light">
+
+                        <div class=" row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">Enter Number</label>
+                            <div class="col-sm-6">
+                                <input type="number" class="form-control" id="in-1">
+                            </div>
+                        </div>
+                        <div class=" row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">Enter Number</label>
+                            <div class="col-sm-6">
+                                <input type="number" class="form-control" id="in-2">
+                            </div>
+                        </div>
+                        <div class="row mt-2 ">
+                            <div class="col-2">
+                                <button class="btn btn-primary btn-block p-3" id="add" onclick="add()">
+                                    +</button>
+
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-primary btn-block p-3" id="sub" onclick="sub()">
+                                    -</button>
+
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-primary btn-block p-3" id="sqr" onclick=" mul()">
+                                    *</button>
+
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-primary btn-block p-3" id="div" onclick="div()">/
+                                </button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card-footer bg-light text-black text-center">
+                                <h3>Result: <span><input type="number" id="abc"></span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            let add = () => {
+                let input_01 = document.querySelector("#in-1").value;
+                let input_02 = document.querySelector("#in-2").value;
+                let res = parseInt(input_01) + parseInt(input_02);
+                document.querySelector("#abc").value = res;
+            }
+            let sub = () => {
+                let input_01 = document.querySelector("#in-1").value;
+                let input_02 = document.querySelector("#in-2").value;
+                let res = parseInt(input_01) - parseInt(input_02);
+                document.querySelector("#abc").value = res;
+
+            }
+            let mul = () => {
+                let input_01 = document.querySelector("#in-1").value;
+                let input_02 = document.querySelector('#in-2').value;
+                let res = parseInt(input_01) * parseInt(input_02);
+                document.querySelector("#abc").value = res;
+            }
+            let div = () => {
+                let input_01 = document.querySelector("#in-1").value;
+                let input_02 = document.querySelector("#in-2").value;
+                let res = parseInt(input_01) / parseInt(input_02);
+
+                document.querySelector("#abc").value = res;
+
+            }
+
+
+        </script>
+</body>
+
+</html>
